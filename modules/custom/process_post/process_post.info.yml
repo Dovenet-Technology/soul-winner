@@ -1,0 +1,7 @@
+name: Process Post
+type: module
+description: This Module will accept Post Data from the Mobile app and decide whelther to create a new node or update existing node
+core: 8.x
+package: Soul Winner
+dependencies:
+  - rest

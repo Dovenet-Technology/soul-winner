@@ -1,0 +1,7 @@
+sync.content:
+  path: '/sync'
+  defaults:
+    _controller: 'Drupal\sync\Controller\SyncController::content'
+    _title: 'Syncronization'
+  requirements:
+    _permission: 'access content'

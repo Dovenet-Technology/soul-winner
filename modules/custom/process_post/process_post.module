@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains process_post.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function process_post_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the process_post module.
+    case 'help.page.process_post':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This Module will accept Post Data from the Mobile app and decide whelther to create a new node or update existing node') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function process_post_theme() {
+  return [
+    'process_post' => [
+      'render element' => 'children',
+    ],
+  ];
+}
